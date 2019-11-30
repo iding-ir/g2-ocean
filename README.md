@@ -2,25 +2,18 @@
 
 ## About this demo
 
-What is before you was originally created as a prototype, developed from the scratch, to demonstrate my front-end capabilities (Javascript, ECMAScript6 and GIS) to [G2 Ocean](https://www.g2ocean.com). However, later I decided to continue this project as [Mapcraft](https://github.com/iding-ir/mapcraft), an SDK around [Mapbox GL JS](https://github.com/mapbox/mapbox-gl-js).
+What you see was originally created as a prototype, developed to demonstrate my front-end capabilities (ECMAScript6 and GIS) to [G2 Ocean](https://www.g2ocean.com). However, later I decided to continue this project as [Mapcraft](https://github.com/iding-ir/mapcraft), a Node module and a mini SDK around [Mapbox GL JS](https://github.com/mapbox/mapbox-gl-js).
 
-In this app, mapcraft.js class creates a map view, while script.js uses three mock [GeoJSON](https://geojson.org) files to compute and visualize data onto the map.
-
-I also used Bootstrap to save time with UI.
+I used Bootstrap to save time with UI.
 
 [Live Demo](http://g2ocean.iding.ir)
-
-## Where to look?
-
-There are two files that you might want to check:
-1. [mapcraft.js](https://github.com/iding-ir/g2-ocean/blob/master/src/js/mapcraft.js): an ECMAScript6 class that creates a map view.
-2. [script.js](https://github.com/iding-ir/g2-ocean/blob/master/src/js/script.js): a Javascript and jQuery file that uses mapcraft.js to create the app.
 
 ## Data structure
 
 This app loads three mock [GeoJSON](https://geojson.org) files locally:
 
 ### routes.json (shortened):
+
 ```
 {
   "type": "FeatureCollection",
@@ -85,7 +78,9 @@ This app loads three mock [GeoJSON](https://geojson.org) files locally:
   ]
 }
 ```
+
 ### ports.json (shortened):
+
 ```
 {
   "type": "FeatureCollection",
@@ -127,7 +122,9 @@ This app loads three mock [GeoJSON](https://geojson.org) files locally:
   ]
 }
 ```
+
 ### vessels.json (shortened):
+
 ```
 {
   "type": "FeatureCollection",
@@ -197,30 +194,53 @@ This app loads three mock [GeoJSON](https://geojson.org) files locally:
   ]
 }
 ```
+
 ## Screenshots
 
 ### First view:
-![First view](http://g2ocean.iding.ir/screenshots/screen-shot-2019-11-12-at-015319.png)
-### Searching for cargo by cargo-id:
-![Searching for cargo by cargo-id](http://g2ocean.iding.ir/screenshots/screen-shot-2019-11-12-at-015333.png)
-### Finding the vessel:
-![Finding the vessel](http://g2ocean.iding.ir/screenshots/screen-shot-2019-11-12-at-015352.png)
-### Vessel information:
-![Vessel information](http://g2ocean.iding.ir/screenshots/screen-shot-2019-11-12-at-015359.png)
-### Searching for cargo in a vessel by its owner-id:
-![Searching for cargo in a vessel by its owner-id](http://g2ocean.iding.ir/screenshots/screen-shot-2019-11-12-at-015408.png)
-### Finding cargo by owner-id:
-![Finding cargo by owner-id](http://g2ocean.iding.ir/screenshots/screen-shot-2019-11-12-at-015418.png)
-### Selecting a trade route:
-![Selecting a trade route](http://g2ocean.iding.ir/screenshots/screen-shot-2019-11-12-at-015437.png)
-### Fitting bounds to a route:
-![Fitting bounds to a route](http://g2ocean.iding.ir/screenshots/screen-shot-2019-11-12-at-015453.png)
-### Viewing route info:
-![Viewing route info](http://g2ocean.iding.ir/screenshots/screen-shot-2019-11-12-at-015538.png)
-### Viewing port info:
-![Viewing port info](http://g2ocean.iding.ir/screenshots/screen-shot-2019-11-12-at-015542.png)
-### Show/hide layers on map:
-![Show/hide layers on map](http://g2ocean.iding.ir/screenshots/screen-shot-2019-11-12-at-015554.png)
-### Dark mode:
-![Dark mode](http://g2ocean.iding.ir/screenshots/screen-shot-2019-11-12-at-015601.png)
 
+![First view](http://g2ocean.iding.ir/screenshots/screen-shot-2019-11-12-at-015319.png)
+
+### Searching for cargo by cargo-id:
+
+![Searching for cargo by cargo-id](http://g2ocean.iding.ir/screenshots/screen-shot-2019-11-12-at-015333.png)
+
+### Finding the vessel:
+
+![Finding the vessel](http://g2ocean.iding.ir/screenshots/screen-shot-2019-11-12-at-015352.png)
+
+### Vessel information:
+
+![Vessel information](http://g2ocean.iding.ir/screenshots/screen-shot-2019-11-12-at-015359.png)
+
+### Searching for cargo in a vessel by its owner-id:
+
+![Searching for cargo in a vessel by its owner-id](http://g2ocean.iding.ir/screenshots/screen-shot-2019-11-12-at-015408.png)
+
+### Finding cargo by owner-id:
+
+![Finding cargo by owner-id](http://g2ocean.iding.ir/screenshots/screen-shot-2019-11-12-at-015418.png)
+
+### Selecting a trade route:
+
+![Selecting a trade route](http://g2ocean.iding.ir/screenshots/screen-shot-2019-11-12-at-015437.png)
+
+### Fitting bounds to a route:
+
+![Fitting bounds to a route](http://g2ocean.iding.ir/screenshots/screen-shot-2019-11-12-at-015453.png)
+
+### Viewing route info:
+
+![Viewing route info](http://g2ocean.iding.ir/screenshots/screen-shot-2019-11-12-at-015538.png)
+
+### Viewing port info:
+
+![Viewing port info](http://g2ocean.iding.ir/screenshots/screen-shot-2019-11-12-at-015542.png)
+
+### Show/hide layers on map:
+
+![Show/hide layers on map](http://g2ocean.iding.ir/screenshots/screen-shot-2019-11-12-at-015554.png)
+
+### Dark mode:
+
+![Dark mode](http://g2ocean.iding.ir/screenshots/screen-shot-2019-11-12-at-015601.png)

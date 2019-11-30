@@ -1,135 +1,246 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>G2 Ocean demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="utf-8">
-  <title>G2 Ocean demo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="./assets/favicon/safari-pinned-tab.svg"
+      color="#1e88e5"
+    />
+    <link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#1e88e5" />
+    <meta
+      name="msapplication-config"
+      content="./assets/favicon/browserconfig.xml"
+    />
+    <meta name="theme-color" content="#1e88e5" />
+  </head>
 
-  <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
-  <link rel="manifest" href="./assets/favicon/site.webmanifest">
-  <link rel="mask-icon" href="./assets/favicon/safari-pinned-tab.svg" color="#1e88e5">
-  <link rel="shortcut icon" href="./assets/favicon/favicon.ico">
-  <meta name="msapplication-TileColor" content="#1e88e5">
-  <meta name="msapplication-config" content="./assets/favicon/browserconfig.xml">
-  <meta name="theme-color" content="#1e88e5">
-</head>
+  <body>
+    <div class="app">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">G2 Ocean</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-<body>
-  <div class="app">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">G2 Ocean</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Trade Routes</a
+              >
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">Trade Routes</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a
+                  class="dropdown-item app-route-manager"
+                  href="#"
+                  data-route="r-1"
+                  >ECSA to North Europe</a
+                >
 
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item app-route-manager" href="#" data-route="r-1">ECSA to North Europe</a>
+                <a
+                  class="dropdown-item app-route-manager"
+                  href="#"
+                  data-route="r-2"
+                  >St. Lawrence to Europe</a
+                >
 
-              <a class="dropdown-item app-route-manager" href="#" data-route="r-2">St. Lawrence to Europe</a>
+                <div class="dropdown-divider"></div>
 
-              <div class="dropdown-divider"></div>
+                <a
+                  class="dropdown-item app-route-manager"
+                  href="#"
+                  data-route="r-3"
+                  >Far East to Middle East</a
+                >
 
-              <a class="dropdown-item app-route-manager" href="#" data-route="r-3">Far East to Middle East</a>
+                <a
+                  class="dropdown-item app-route-manager"
+                  href="#"
+                  data-route="r-4"
+                  >Chile to Far East</a
+                >
+              </div>
+            </li>
+          </ul>
 
-              <a class="dropdown-item app-route-manager" href="#" data-route="r-4">Chile to Far East</a>
+          <form class="form-inline">
+            <div class="form-group my-2 my-lg-0">
+              <div class="custom-control custom-checkbox custom-control-inline">
+                <input
+                  type="checkbox"
+                  name="app-layer-manager"
+                  id="app-layer-ports"
+                  class="custom-control-input app-layer-manager"
+                  data-layer="point-symbol-ports"
+                  checked
+                />
+
+                <label class="custom-control-label" for="app-layer-ports"
+                  >Ports</label
+                >
+              </div>
+
+              <div class="custom-control custom-checkbox custom-control-inline">
+                <input
+                  type="checkbox"
+                  name="app-layer-manager"
+                  id="app-layer-routes"
+                  class="custom-control-input app-layer-manager"
+                  data-layer="polyline-line-routes"
+                  checked
+                />
+
+                <label class="custom-control-label" for="app-layer-routes"
+                  >Routes</label
+                >
+              </div>
+
+              <div class="custom-control custom-checkbox custom-control-inline">
+                <input
+                  type="checkbox"
+                  name="app-layer-manager"
+                  id="app-layer-vessels"
+                  class="custom-control-input app-layer-manager"
+                  data-layer="point-symbol-vessels"
+                  checked
+                />
+
+                <label class="custom-control-label" for="app-layer-vessels"
+                  >Vessels</label
+                >
+              </div>
             </div>
-          </li>
-        </ul>
 
-        <form class="form-inline">
-          <div class="form-group my-2 my-lg-0">
-            <div class="custom-control custom-checkbox custom-control-inline">
-              <input type="checkbox" name="app-layer-manager" id="app-layer-ports"
-                class="custom-control-input app-layer-manager" data-layer="point-symbol-ports" checked>
+            <div class="form-group my-2 my-lg-0">
+              <input
+                id="app-search"
+                class="form-control mr-2"
+                type="search"
+                placeholder="cargo-id (abc-1234)"
+                aria-label="Search"
+              />
 
-              <label class="custom-control-label" for="app-layer-ports">Ports</label>
+              <button
+                id="app-search-submit"
+                class="btn btn-primary my-2 my-sm-0"
+                type="submit"
+              >
+                Track
+              </button>
+            </div>
+          </form>
+        </div>
+      </nav>
+
+      <main id="app-map"></main>
+
+      <div
+        class="modal fade"
+        id="app-modal-vessel"
+        tabindex="-1"
+        role="dialog"
+        aria-hidden="true"
+      >
+        <div
+          class="modal-dialog modal-lg modal-dialog-centered"
+          role="document"
+        >
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title"></h5>
+
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
             </div>
 
-            <div class="custom-control custom-checkbox custom-control-inline">
-              <input type="checkbox" name="app-layer-manager" id="app-layer-routes"
-                class="custom-control-input app-layer-manager" data-layer="polyline-line-routes" checked>
+            <div class="modal-body">
+              <form class="form-inline mb-2">
+                <input
+                  id="app-search-owner"
+                  class="form-control mr-2"
+                  type="search"
+                  placeholder="owner-id (ab-123)"
+                  aria-label="Search"
+                />
 
-              <label class="custom-control-label" for="app-layer-routes">Routes</label>
+                <button
+                  id="app-search-owner-submit"
+                  class="btn btn-primary mr-2 my-sm-0"
+                  type="submit"
+                >
+                  Search
+                </button>
+
+                <button
+                  id="app-search-owner-reset"
+                  class="btn btn-light my-2 my-sm-0"
+                  type="reset"
+                >
+                  Reset
+                </button>
+              </form>
+
+              <p>Enter an owner-id to search for their cargo in this vessel.</p>
+
+              <div class="app-cargo-result"></div>
             </div>
 
-            <div class="custom-control custom-checkbox custom-control-inline">
-              <input type="checkbox" name="app-layer-manager" id="app-layer-vessels"
-                class="custom-control-input app-layer-manager" data-layer="point-symbol-vessels" checked>
-
-              <label class="custom-control-label" for="app-layer-vessels">Vessels</label>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
             </div>
-          </div>
-
-          <div class="form-group my-2 my-lg-0">
-            <div class="custom-control custom-radio custom-control-inline">
-              <input type="radio" name="app-style-manager" id="app-style-light"
-                class="custom-control-input app-style-manager" data-style="light" checked>
-
-              <label class="custom-control-label" for="app-style-light">Light</label>
-            </div>
-
-            <div class="custom-control custom-radio custom-control-inline">
-              <input type="radio" name="app-style-manager" id="app-style-dark"
-                class="custom-control-input app-style-manager" data-style="dark">
-
-              <label class="custom-control-label" for="app-style-dark">Dark</label>
-            </div>
-          </div>
-
-          <div class="form-group my-2 my-lg-0">
-            <input id="app-search" class="form-control mr-2" type="search" placeholder="cargo-id (abc-1234)" aria-label="Search">
-
-            <button id="app-search-submit" class="btn btn-primary my-2 my-sm-0" type="submit">Track</button>
-          </div>
-        </form>
-      </div>
-    </nav>
-
-    <main id="app-map"></main>
-
-    <div class="modal fade" id="app-modal-vessel" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title"></h5>
-
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-
-          <div class="modal-body">
-            <form class="form-inline mb-2">
-              <input id="app-search-owner" class="form-control mr-2" type="search" placeholder="owner-id (ab-123)"
-                aria-label="Search">
-
-              <button id="app-search-owner-submit" class="btn btn-primary mr-2 my-sm-0" type="submit">Search</button>
-
-              <button id="app-search-owner-reset" class="btn btn-light my-2 my-sm-0" type="reset">Reset</button>
-            </form>
-
-            <p>Enter an owner-id to search for their cargo in this vessel.</p>
-
-            <div class="app-cargo-result"></div>
-          </div>
-
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</body>
-
+  </body>
 </html>
