@@ -1,8 +1,21 @@
 {
   "name": "g2-ocean",
-  "version": "2.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "2.1.0",
+  "description": "Maritime transport map.",
+  "keywords": [
+    "maritime",
+    "map",
+    "Mapbox GL JS",
+    "Mapcraft",
+    "GeoJSON"
+  ],
+  "author": {
+    "name": "Aydin Ghane Kh.",
+    "email": "aydin.ghane.kh@gmail.com",
+    "url": "http://iding.ir"
+  },
+  "license": "ISC",
+  "main": "src/index.js",
   "scripts": {
     "start": "webpack-dev-server --config webpack.dev.js --open",
     "build": "webpack --config webpack.prod.js"
@@ -11,32 +24,23 @@
     "type": "git",
     "url": "git+https://github.com/iding-ir/g2-ocean.git"
   },
-  "keywords": [
-    "map", "GeoJSON", "Mapbox GL JS", "Mapcraft"
-  ],
-  "author": {
-    "name": "Aydin Ghane Kh.",
-    "email": "aydin.ghane.kh@gmail.com",
-    "url": "http://iding.ir"
-  },
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/iding-ir/g2-ocean/issues"
   },
   "homepage": "https://github.com/iding-ir/g2-ocean#readme",
   "devDependencies": {
-    "clean-webpack-plugin": "^2.0.0",
-    "copy-webpack-plugin": "^5.0.5",
+    "autoprefixer": "^9.7.2",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^5.1.1",
     "css-loader": "^2.1.0",
-    "file-loader": "^3.0.1",
+    "file-loader": "^6.0.0",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.5.0",
-    "node-sass": "^4.11.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
-    "sass-loader": "^7.1.0",
+    "postcss-loader": "^3.0.0",
     "style-loader": "^0.23.1",
-    "webpack": "^4.29.6",
+    "webpack": "^4.42.1",
     "webpack-cli": "^3.2.3",
     "webpack-dev-server": "^3.2.1",
     "webpack-merge": "^4.2.1"
@@ -49,5 +53,22 @@
     "mapcraft": "^0.1.0",
     "popper.js": "^1.16.0",
     "terraformer": "^1.0.9"
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
